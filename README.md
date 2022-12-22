@@ -45,8 +45,7 @@ https://www.make.com/en
  8. If the consult is remote or present a Calendly module is instantaniated and redirect the user to calendly webpage where he/she can choose the day and hour of the appointment that are currently available in the doctor's agenda. 
  9. After choosing the suited hour and day of the consult the patient receives an email with the present room (present) or a google meet session invitation (remote). Moreover, the consult is saved in both patient's and doctor's Google calendar. 
  Emergency. If the output is an emergency an email is claiming the urgent of the signs the user is presenting and that he/she might call 112.
-
- 
+  
  
  
  Authors and acknowledgement
