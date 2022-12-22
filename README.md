@@ -22,7 +22,7 @@ https://www.make.com/en
  Calendly
 
  Camunda process description 
- 
+ ![Alt text](/BPMN.bmp)
  
  
  
