@@ -32,6 +32,10 @@ https://www.make.com/en
  Form Webpage 
  
   ![Alt text](/Webpage.bmp)
+  
+  Decision table:
+  
+  ![Alt text](/DMN.bmp)
 
  Workflow explanation
  
