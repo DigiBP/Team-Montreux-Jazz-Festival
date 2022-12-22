@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:modeler="http://camunda.org/schema/modeler/1.0" xmlns:camunda="http://camunda.org/schema/1.0/dmn" id="Definitions_1f6g7w3" name="DRD" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="5.5.1" modeler:executionPlatform="Camunda Platform" modeler:executionPlatformVersion="7.17.0">
+  <decision id="Decision_1syftmu" name="SurveyDecision">
+    <decisionTable id="DecisionTable_0e2mz7a" hitPolicy="COLLECT" aggregation="MIN">
+      <input id="Input_1" label="Age" camunda:inputVariable="Age">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>Age</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1s1uzwy" label="RequestReason" camunda:inputVariable="RequestReason">
+        <inputExpression id="LiteralExpression_1tia72x" typeRef="string" expressionLanguage="feel">
+          <text>RequestReason</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_074t47e" label="Symptoms" camunda:inputVariable="Symptoms">
+        <inputExpression id="LiteralExpression_06wuyxi" typeRef="string">
+          <text>Symptoms</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_10bqdpr" label="PreviousDiagnosis" camunda:inputVariable="PreviousDiagnosis">
+        <inputExpression id="LiteralExpression_0ebyya3" typeRef="string">
+          <text>PreviousDiagnosis</text>
+        </inputExpression>
+      </input>
+      <output id="OutputClause_11vveh3" name="consultResult" typeRef="integer" />
+      <rule id="DecisionRule_0da50ex">
+        <description>Remote</description>
+        <inputEntry id="UnaryTests_0nsgv53">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_02jhub0">
+          <text>"Convinience concerns"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1uynisr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1d6puam">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1lrqix2">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1o20kk5">
+        <description>Remote</description>
+        <inputEntry id="UnaryTests_1j2n35e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_05uohc8">
+          <text>"Medication refills"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_018xn30">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0pv1sjd">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0q993w9">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03kgwrg">
+        <description>Remote</description>
+        <inputEntry id="UnaryTests_1umtnc9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1t2ri76">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_03ez3k1">
+          <text>"Cold" , "Flu", "Fever"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_04e9lft">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1bonbft">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1lz09nl">
+        <description>Remote</description>
+        <inputEntry id="UnaryTests_0eb7qdm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kyt13z">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11f9sb1">
+          <text>"Conjunctivitis"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0k11dh1">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0vnty45">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1e6ltgp">
+        <description>Remote</description>
+        <inputEntry id="UnaryTests_00vu1iw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0p8tayk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wan7ru">
+          <text>"Headache", "Migraine"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1kwrx68">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ziauwo">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1303vwe">
+        <description>Remote</description>
+        <inputEntry id="UnaryTests_093ow54">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1twgy8d">
+          <text>"Insect bites"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1yfg8xr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0n441tj">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1y6lalb">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0544z04">
+        <description>Remote</description>
+        <inputEntry id="UnaryTests_070c5qa">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1czfbjr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0l2w94k">
+          <text>"Joint aches and pain"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e56qpb">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0xyr2xw">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0z3wdt9">
+        <description>Remote</description>
+        <inputEntry id="UnaryTests_1u4x9ut">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1u4lhzw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0d606u2">
+          <text>"Minor physical injuries"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1xd106u">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1clkxa7">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_16jmn5y">
+        <description>Remote</description>
+        <inputEntry id="UnaryTests_0s00tna">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0rppbop">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0g83cam">
+          <text>"Nausea"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wo6ht0">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0qi1s9f">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1eb0piz">
+        <description>Remote</description>
+        <inputEntry id="UnaryTests_1b9u4ha">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_08ho25g">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0i4nrb2">
+          <text>"Painful urination"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11rxdfh">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_05acodh">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_11mcoxd">
+        <description>Remote</description>
+        <inputEntry id="UnaryTests_01rnsp4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17cu6vi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1y1lwue">
+          <text>"Rashes", "Skin Inflammation"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e8mta7">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0hbdhit">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0o8qxdw">
+        <description>Remote</description>
+        <inputEntry id="UnaryTests_0bgw2da">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_088p3pk">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_01a10sh">
+          <text>"Sinus pressure"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gc4zgt">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_097hhmm">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0angr01">
+        <description>Remote</description>
+        <inputEntry id="UnaryTests_1vbv3uw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bw1jly">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1038683">
+          <text>"Small wounds"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jb54v6">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1bu7fhe">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_14zenpg">
+        <description>Remote</description>
+        <inputEntry id="UnaryTests_00ypxu8">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1f2bxdr">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jyqa6c">
+          <text>"Sore throat"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iy44jy">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08db60j">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1ib195h">
+        <description>Remote</description>
+        <inputEntry id="UnaryTests_05uk8a4">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_13pnd7e">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0e1ulnq">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_019zo66">
+          <text>"Gastroesophageal reflux"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0i60w2r">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1agv9cl">
+        <description>Remote</description>
+        <inputEntry id="UnaryTests_0kdr5g1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0ghg9do">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1r7ir2u">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1o17pwe">
+          <text>"Atopic skin"</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0eutucr">
+          <text>3</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_034o0um">
+        <description>Present</description>
+        <inputEntry id="UnaryTests_1kgotfd">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_004l42x">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rg4c1m">
+          <text>"Confusion", "Delirium"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_152yce9">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1bnju6h">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_03bw64b">
+        <description>Present</description>
+        <inputEntry id="UnaryTests_04b4lmb">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_12x8yop">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1h8mdcv">
+          <text>"Severe shortness of breath" </text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1jbuhgl">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0loyw29">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1yvf2wc">
+        <description>Present</description>
+        <inputEntry id="UnaryTests_0yh4858">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11vywuw">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cfb6ly">
+          <text>"Blue lips"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0m40gy3">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_07obadz">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1jfytf9">
+        <description>Present</description>
+        <inputEntry id="UnaryTests_17uzbrm">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1q2aow9">
+          <text>"Suspected broken bones"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1vuz6qz">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bfh10h">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0y8d9ty">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_00aq5i3">
+        <description>Present</description>
+        <inputEntry id="UnaryTests_0y8crr1">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lxmoy2">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0z1fb2m">
+          <text>"Fainting"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1d6jka0">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1fa37h2">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1eizlt8">
+        <description>Present</description>
+        <inputEntry id="UnaryTests_105acoi">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1v5y06d">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0j6eaf6">
+          <text>"Abdominal  pain"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_17dzkyd">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_099s906">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0mtr75v">
+        <description>Present</description>
+        <inputEntry id="UnaryTests_0feio9r">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1cnyh7i">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1k1g93s">
+          <text>"Stitches laceration"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1rdbn1c">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0rsvyle">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0w8004x">
+        <description>Present</description>
+        <inputEntry id="UnaryTests_1vq3r20">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0igwv4o">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0iugkfs">
+          <text>"Seizures"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1af63ix">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0o296h2">
+          <text>2</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0ip9oqr">
+        <description>Emergency</description>
+        <inputEntry id="UnaryTests_1qoh0m9">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_138m6ro">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_126kn48">
+          <text>"One side numbness", "Facial drooping", "Signs of stroke"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0554iyp">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0ni0v5v">
+          <text>1</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1fajzy5">
+        <description>Emergency</description>
+        <inputEntry id="UnaryTests_1h5ccry">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0unm44o">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0t6buhp">
+          <text>"Chest pain" , "Chest pressure"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09jkluj">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1ux4pr5">
+          <text>1</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_173btmo">
+        <description>Emergency</description>
+        <inputEntry id="UnaryTests_198jlyv">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0kqw5zn">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_09ggw3o">
+          <text>"Signs of heart attack"</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1fw8rl7">
+          <text></text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_08rqg3r">
+          <text>1</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_1syftmu">
+        <dc:Bounds height="80" width="180" x="160" y="100" />
+      </dmndi:DMNShape>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
