@@ -43,7 +43,7 @@ https://www.make.com/en
  2. The patient data is saved in a Google Spreadsheet
  3. The make process takes the data from the last row of the Google spreadsheet
  4. An HTTP POST request start the business process and gives as input variable the data from the spreadsheet.
- 5. A decision table is used to choose which type of consult (or even emergency) might be best suited for that concrete user
+ 5. A decision table is used to choose which type of consult (or even emergency) might be best suited for that concrete user. In the table the result is a number which represent to each category (3 - Remote, 2- Present, 1- Emergency). THe HIT policy is set at Collect (MIN) so that if two or more rows are fulfilled only the more little number is chosen (As lower the number, greater clinical gravity).  
  6. The next task (Service Task) fetch and locks the Make process through another HTTP request which sends the output of the deccision table to the Make process.
  7. The Make process chooses the route depending of the output of the decision table.
  8. If the consult is remote or present a Calendly module is instantaniated and redirect the user to calendly webpage where he/she can choose the day and hour of the appointment that are currently available in the doctor's agenda. 
