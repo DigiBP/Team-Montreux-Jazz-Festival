@@ -33,6 +33,19 @@ https://www.make.com/en
  
   ![Alt text](/Webpage.bmp)
 
+ Workflow explanation
+ 
+ 1. The user submits his/her data on the form
+ 2. The patient data is saved in a Google Spreadsheet
+ 3. The make process takes the data from the last row of the Google spreadsheet
+ 4. An HTTP POST request start the business process and gives as input variable the data from the spreadsheet.
+ 5. A decision table is used to choose which type of consult (or even emergency) might be best suited for that concrete user
+ 6. The next task (Service Task) fetch and locks the Make process through another HTTP request which sends the output of the deccision table to the Make process.
+ 7. The Make process chooses the route depending of the output of the decision table.
+ 8. If the consult is remote or present a Calendly module is instantaniated and redirect the user to calendly webpage where he/she can choose the day and hour of the appointment that are currently available in the doctor's agenda. 
+ 9. After choosing the suited hour and day of the consult the patient receives an email with the present room (present) or a google meet session invitation (remote). Moreover, the consult is saved in both patient's and doctor's Google calendar. 
+ Emergency. If the output is an emergency an email is claiming the urgent of the signs the user is presenting and that he/she might call 112.
+
  
  
  
@@ -48,7 +61,7 @@ Responsibilities
  1. Marc Molina Van den Bosch(Modelling, Integration)
  2. Marco the Luca (Modelling and Presentation)
  3. Caterina Montalbano(Modelling and Integration)
- 4. Dibya Kumari(Readme)
+ 4. Dibya Kumari
 
 
  
